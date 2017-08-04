@@ -26,6 +26,18 @@ prm-search > md-content.md-primoExplore-theme .main {
   }
 }
 
+.default-card.message {
+  border-width: 3px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 6px;
+  color: #5c92bd;
+}
+
+.message-important {
+  color: red;
+}
+
 .icon {
   background-position: left center;
   background-repeat: no-repeat;
@@ -34,32 +46,37 @@ prm-search > md-content.md-primoExplore-theme .main {
   padding-top: 18px;
 }
 
-.icon-renew {  
-  background-image: url('/primo-explore/custom/MATT_TEST/img/icon-renew.png');
-}
-
 .icon-ask { 
-  background-image: url('/primo-explore/custom/MATT_TEST/img/icon-ask.png');  
+  background-image: url('/primo-explore/custom/MATT_TEST/img/ask-PNG.png');  
 }
 
 .icon-libweb {
-  background-image: url('/primo-explore/custom/MATT_TEST/img/icon-libweb.png');  
+  background-image: url('/primo-explore/custom/MATT_TEST/img/www-PNG.png');  
 }
 
 .icon-databases {
-  background-image: url('/primo-explore/custom/MATT_TEST/img/icon-databases.png');  
+  background-image: url('/primo-explore/custom/MATT_TEST/img/databases-PNG.png');  
 }
 
 .icon-eJournals {
-  background-image: url('/primo-explore/custom/MATT_TEST/img/icon-eJournals.png'); 
+  background-image: url('/primo-explore/custom/MATT_TEST/img/eJournals-PNG.png'); 
 }
 
 .icon-libguides {
-  background-image: url('/primo-explore/custom/MATT_TEST/img/icon-libguides.png');  
+  background-image: url('/primo-explore/custom/MATT_TEST/img/libGuides-PNG.png');  
+}
+
+.icon-libaccount {
+  background-image: url('/primo-explore/custom/MATT_TEST/img/account-PNG.png');  
 }
 
 #live-chat {
-  background-color: #999 !important; 
+  /*background-color: #999 !important; */
+}
+
+.libraryh3lp {
+  display: inline;
+  border: none;
 }
 
 /* Top Bar */
@@ -69,39 +86,41 @@ prm-change-lang {
   display: none;
 }
 
-/* Logo clickable changes */
-prm-logo div.product-logo {
-    display:none;
-}
- 
-prm-logo div.product-logo-local {
- display: flex;
+/* hide library card and settings buttons*/
+prm-library-card-menu {
+  display: none;
 }
 
-/* scratch pad */
-md-fab-actions.md-toolbar-tools {
-  background-color: red;
-}
-
-div.hide-xs.flex-50 {
-  background-color: blue;
-}
-
-div.flex-xs-100.flex-50:nth-of-type(2):not(.flex-xs) {
-  background-color: green;
-}
-
-/*button.user-menu-button.md-button.md-primoExplore-theme.md-ink-ripple.hide-xs{
+/* Hide 'Related Reading' strip */
+/*.full-view-aside {
   display: none;
 }*/
 
-button.button-with-icon:not(.switch-to-advanced) {
-  background-color: yellow;
+prm-recomendations {
+  display: none;
 }
-
-prm-search-bookmark-filter {
-  background-color: cyan;
-}
-
 /*
+.recommendations-wrapper, .recomendations-list{
+  display: none;
+}
+*/
+/*prm-full-view {
+  display: none;
+}
 
+prm-full-view div.full-view-container {
+  display: inline-flex;
+}
+*/
+/* Hide 'Tags' */
+div#tags {
+  display: none;
+}
+
+/*.zero-margin.button-right-align.button-link.md-button.md-primoExplore-theme.md-ink-ripple:last-of-type {
+  display: none;
+}*/
+
+[translate~="brief.results.tabs.tags"] {
+    border: 5px solid yellow;
+}
