@@ -14,19 +14,9 @@ prm-search > md-content.md-primoExplore-theme .main {
 .screen-gt-sm .sidebar {
     webkit-flex: 0 0 15%;
     flex: 0 0 15%;
-}
+} 
 
-.default-card a {
-  border-width: 3px;
-  border-style: solid;
-  border-color: white;
-  border-radius: 6px;
-  &:hover{
-    border-color: #5c92bd;
-  }
-}
-
-.default-card.message {
+.default-card{
   border-width: 3px;
   border-style: solid;
   border-color: white;
@@ -70,10 +60,6 @@ prm-search > md-content.md-primoExplore-theme .main {
   background-image: url('/primo-explore/custom/MATT_TEST/img/account-PNG.png');  
 }
 
-#live-chat {
-  /*background-color: #999 !important; */
-}
-
 .libraryh3lp {
   display: inline;
   border: none;
@@ -92,35 +78,45 @@ prm-library-card-menu {
 }
 
 /* Hide 'Related Reading' strip */
-/*.full-view-aside {
-  display: none;
-}*/
-
 prm-recomendations {
   display: none;
 }
-/*
-.recommendations-wrapper, .recomendations-list{
-  display: none;
-}
-*/
-/*prm-full-view {
-  display: none;
-}
 
-prm-full-view div.full-view-container {
-  display: inline-flex;
-}
-*/
 /* Hide 'Tags' */
+/* tags div */
 div#tags {
   display: none;
 }
 
-/*.zero-margin.button-right-align.button-link.md-button.md-primoExplore-theme.md-ink-ripple:last-of-type {
-  display: none;
-}*/
+/* tags left menu option */
+[aria-label~="Tags"] {
+    display: none;
+}
 
-[translate~="brief.results.tabs.tags"] {
-    border: 5px solid yellow;
+prm-top-nav-bar-links-after div.libraryh3lp{
+  font-variant-caps: all-small-caps;
+  margin: 3px;
+  border:3px;
+  width: 100px;  
+}
+
+prm-top-nav-bar-links-after div.libraryh3lp a {
+  color: #a9cdd6;
+}
+
+prm-top-nav-bar-links-after div.libraryh3lp a:hover {
+  color: #FFF;
+  background-color: #3D5B72;
+}
+
+
+prm-top-nav-bar-links-after div.spacer {
+  font-variant-caps: all-small-caps;
+  padding: 20px;
+  min-width: 120px;
+}
+
+prm-top-nav-bar-links-after div.spacer:hover {
+  color: #4D6B82;
+  background-color: #3D5B72;
 }
