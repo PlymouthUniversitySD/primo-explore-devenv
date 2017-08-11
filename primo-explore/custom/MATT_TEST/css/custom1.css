@@ -93,15 +93,27 @@ div#tags {
     display: none;
 }
 
-prm-top-nav-bar-links-after div.libraryh3lp{
-  font-variant-caps: all-small-caps;
+prm-top-nav-bar-links-after {
+  border-right: 0.5px solid #3D5B72;
+  font-variant-caps: all-petite-caps;
+  font-family: Verdana, Helvetica, Sans-Serif;
+  font-size: 14.5px;
+  font-weight: bolder;
+  letter-spacing: 1px
   margin: 3px;
-  border:3px;
-  width: 100px;  
+  min-width: 100px;
+}
+
+prm-top-nav-bar-links-after div.libraryh3lp {
+  color: #BFC8CF;
+}
+
+prm-top-nav-bar-links-after div.libraryh3lp:hover {
+  color: #4D6B82;
 }
 
 prm-top-nav-bar-links-after div.libraryh3lp a {
-  color: #a9cdd6;
+  color: #BFC8CF;
 }
 
 prm-top-nav-bar-links-after div.libraryh3lp a:hover {
@@ -111,9 +123,7 @@ prm-top-nav-bar-links-after div.libraryh3lp a:hover {
 
 
 prm-top-nav-bar-links-after div.spacer {
-  font-variant-caps: all-small-caps;
   padding: 20px;
-  min-width: 120px;
 }
 
 prm-top-nav-bar-links-after div.spacer:hover {
