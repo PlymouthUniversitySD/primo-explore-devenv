@@ -1,0 +1,93 @@
+@import "compass/css3";
+
+$main-color:#A50000;
+$text-color:#fff;
+
+@mixin transition($speed){
+  -webkit-transition:all $speed ease;
+  -moz-transition:all $speed ease;
+  -ms-transition:all $speed ease;
+  -o-transition:all $speed ease;
+  transition:all $speed ease;
+}
+@mixin border-radius($size){
+  -webkit-border-radius:$size;
+  border-radius:$size;
+}
+@mixin rotate($direction){
+  -webkit-transform: rotate($direction);
+  -moz-transform: rotate($direction);
+  -ms-transform: rotate($direction);
+  -o-transform: rotate($direction);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+@mixin gradient($color){
+  background: $color;
+  background: -moz-radial-gradient(90% 50%, ellipse cover, lighten($color,15%) 0%, $color 75%);
+  background: -webkit-gradient(radial, 90% 50%, 0px, 90% 50%, 75%, color-stop(0%,lighten($color,15%)), color-stop(75%,$color));
+  background: -webkit-radial-gradient(90% 50%, ellipse cover, lighten($color,15%) 0%,$color 40%);
+  background: -o-radial-gradient(90% 50%, ellipse cover, lighten($color,15%) 0%,$color 75%);
+  background: -ms-radial-gradient(90% 50%, ellipse cover, lighten($color,15%) 0%,$color 75%);
+  background: radial-gradient(ellipse at 90% 50%, lighten($color,15%) 0%,$color 75%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=lighten($color,15%), endColorstr=$color,GradientType=1);
+}
+html,body{
+  height:100%;
+}
+#flyout{
+  width:350px;
+  min-height:150px;
+  @include gradient($main-color);
+  border:1px solid $main-color;
+  position:absolute;
+  top:30px;
+  right:-350px;
+  @include transition(400ms);
+  @include border-radius(4px 0 0 4px);
+  padding:15px;
+  h3{
+    margin:0;
+    color:$text-color;
+  }
+  h4{
+    color:$text-color;
+    margin:0 0 20px 0;
+  }
+  .form-control{
+    color:$main-color;
+  }
+  textarea{
+    min-height:100px;
+  }
+  .btn-defult{
+    background-color:$text-color;
+    border:none;
+    color:$main-color;
+    &:hover{
+      opacity:0.4;
+    }
+  }
+}
+#flyout #button{
+  position:absolute;
+  top:64px;
+  left:-98px;
+  border-bottom:0;
+  @include rotate(-90deg);
+  @include transition(400ms);
+  .text{
+    @include border-radius(4px 4px 0 0);
+    padding:10px 20px 15px 20px;
+    opacity:1;
+    @include transition(400ms);
+    border-bottom:none;
+  }
+  .btn-primary{
+    background-color:$main-color;
+    border-color:$main-color;
+  }
+}
+#flyout:hover{
+  right:0;
+  @include transition(400ms);
+}
