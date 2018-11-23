@@ -192,8 +192,8 @@ prm-alert-bar {
   /*@include gradient($main-color);*/
   border: 1px solid #598234;
   position: absolute;
-  top: 230px;
-  right: -420px;
+  bottom: -395px;
+  right: 20px;
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
   -ms-transition: all 400ms ease;
@@ -222,13 +222,13 @@ prm-alert-bar {
 
 #flyout #button {
   position: absolute;
-  top: 64px;
-  left: -84px;
+  bottom: 385px;
+  right: 30px;
   border-bottom: 0;
-  -webkit-transform: rotate(-90deg);
+  /* -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg); */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
@@ -252,7 +252,7 @@ prm-alert-bar {
     border-color: #598234; }
 
 #flyout:hover {
-  right: 0;
+  bottom: 0;
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
   -ms-transition: all 400ms ease;
@@ -264,7 +264,3 @@ prm-alert-bar {
   height: 300px;
   border-width: 0px;
   border-style: none; }
-
-
-
-
