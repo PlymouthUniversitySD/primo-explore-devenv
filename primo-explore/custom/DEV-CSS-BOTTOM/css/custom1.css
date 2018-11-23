@@ -1,0 +1,270 @@
+
+/* Reorders the Full Record Sections witht he aim of moving the 'Send to' Section below the View It / Get It Sections */
+/* See email from Yongli Zhou, forward to Tony from Primo List 20/11/2017 */
+#getit_link1_0 { order: 0; }
+#getit_link2_0 { order: 1; }
+#action_list{ order: 2; } /* send to */
+#details { order: 3; }
+#links { order: 4; }
+#citations { order: 5; }
+#virtualBrowse { order: 6; }
+.full-view-inner-container {
+padding-bottom: 10em;
+display: flex;
+flex-direction: column;
+}
+[aria-label="View it"] { order: 0 !important; }
+[aria-label="Get it"] { order: 1 !important; }
+[aria-label="Send to"] { order: 2 !important; }
+[aria-label="Details"] { order: 3 !important; }
+[aria-label="Links"] { order: 4 !important; }
+[aria-label="Citations"] { order: 5 !important; }
+[aria-label="Virtual Browse"] { order: 6 !important; }
+
+
+
+/*Uncomment the follwoing lines to move facets to the left*/
+
+/*
+prm-search > md-content.md-primoExplore-theme .main {
+    display: -webkit-flex; !* Safari *!
+    -webkit-flex-flow: row-reverse wrap; !* Safari 6.1+ *!
+    display: flex;
+    flex-flow: row-reverse wrap;
+
+}
+
+.screen-gt-sm .sidebar {
+    webkit-flex: 0 0 15%;
+    flex: 0 0 15%;
+} 
+*/
+
+prm-logo .product-logo {
+    cursor: pointer;
+    height: 100%;
+    padding: .8em;
+}
+
+.default-card{
+  border-width: 3px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 6px;
+  color: #5c92bd;
+}
+
+.message-important {
+  color: red;
+}
+
+.icon {
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 35px;
+  padding-bottom: 17px;
+  padding-top: 18px;
+}
+
+.icon-ask { 
+  background-image: url('/primo-explore/custom/DEV-MESS/img/ask-PNG.png');  
+}
+
+.icon-libweb {
+  background-image: url('/primo-explore/custom/DEV-MESS/img/www-PNG.png');  
+}
+
+.icon-databases {
+  background-image: url('/primo-explore/custom/DEV-MESS/img/databases-PNG.png');  
+}
+
+.icon-eJournals {
+  background-image: url('/primo-explore/custom/DEV-MESS/img/eJournals-PNG.png'); 
+}
+
+.icon-libguides {
+  background-image: url('/primo-explore/custom/DEV-MESS/img/libGuides-PNG.png');  
+}
+
+.icon-libaccount {
+  background-image: url('/primo-explore/custom/DEV-MESS/img/account-PNG.png');  
+}
+
+.libraryh3lp {
+  display: inline;
+  border: none;
+}
+
+/* Top Bar */
+
+/* hide language selection */
+prm-change-lang {
+  display: none;
+}
+
+/* hide library card and settings buttons*/
+prm-library-card-menu {
+  display: none;
+}
+
+/* Hide 'Related Reading' strip */
+prm-recomendations {
+  display: none;
+}
+
+/* Hide 'Tags' */
+/* tags div */
+div#tags {
+  display: none;
+}
+
+/* tags left menu option */
+[aria-label~="Tags"] {
+    display: none;
+}
+
+prm-top-nav-bar-links-after {
+  border-right: 0.5px solid #3D5B72;
+  font-size: 11.25px;
+  font-weight: 600;
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 0.3375px;
+  line-height: 13.5px;
+  margin: 3px;
+  min-width: 100px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+
+prm-top-nav-bar-links-after div.libraryh3lp {
+  color: #BFC8CF;
+}
+
+prm-top-nav-bar-links-after div.libraryh3lp:hover {
+  color: #4D6B82;
+}
+
+prm-top-nav-bar-links-after div.libraryh3lp a {
+  color: #BFC8CF;
+}
+
+prm-top-nav-bar-links-after div.libraryh3lp a:hover {
+  color: #FFF;
+  background-color: #3D5B72;
+}
+
+
+prm-top-nav-bar-links-after div.spacer {
+  padding: 20px;
+}
+
+prm-top-nav-bar-links-after div.spacer:hover {
+  color: #4D6B82;
+  background-color: #3D5B72;
+}
+
+
+/* Hides 'Alert Bar' on Brief Results page */
+/* The Alert Bar was causing confusing amongst users who though they had to sign in to search */
+prm-alert-bar {
+  display: none;
+}
+
+
+/*Footer*/
+/*Push down and Center*/
+  /* Copied from http://alliance-primo-sb.hosted.exlibrisgroup.com 24/08/2018   */
+  prm-explore-footer-after {
+    padding-left: 100px;
+    }
+    prm-explore-footer-after table {
+        text-align: center;
+        width: 114.5%;
+    }
+
+    
+/* Chat widget */  
+
+#flyout {
+  width: 420px;
+  min-height: 350px;
+  background: #598234;
+  /*@include gradient($main-color);*/
+  border: 1px solid #598234;
+  position: absolute;
+  top: 230px;
+  right: -420px;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  margin: -5px;
+  padding: 15px; }
+  #flyout h3 {
+    margin: 0;
+    color: #fff; }
+  #flyout h4 {
+    color: #fff;
+    margin: 0 0 20px 0; }
+  #flyout .form-control {
+    color: #598234; }
+  #flyout textarea {
+    min-height: 100px; }
+  #flyout .btn-defult {
+    background-color: #fff;
+    border: none;
+    color: #598234; }
+    #flyout .btn-defult:hover {
+      opacity: 0.4; }
+
+#flyout #button {
+  position: absolute;
+  top: 64px;
+  left: -84px;
+  border-bottom: 0;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease; }
+  #flyout #button .text {
+    -webkit-border-radius: 40px 40px 0 0;
+    border-radius: 40px 40px 0 0;
+    padding: 10px 20px 15px 20px;
+    opacity: 1;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    border-bottom: none;
+    color: #fff; }
+  #flyout #button .btn-primary {
+    background-color: #598234;
+    border-color: #598234; }
+
+#flyout:hover {
+  right: 0;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease; }
+
+#library-chat-widget {
+  width: 100%;
+  height: 300px;
+  border-width: 0px;
+  border-style: none; }
+
+
+
+
