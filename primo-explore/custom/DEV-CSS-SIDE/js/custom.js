@@ -16,27 +16,11 @@
   }]);  
     
   /*Custom Footer */
-	app.component('prmExploreFooterAfter', {
-		bindings: {parentCtrl: '<'},
-		template: '<table><tr><td><a href="https://www.plymouth.ac.uk/student-life/your-studies/library">Charles Seale-Hayne Library</a></td></tr><tr><td>University of Plymouth</td></tr><tr><td>Drake Circus</td></tr><tr><td>Plymouth</td></tr><tr><td>Devon PL4 8AA</td></tr><tr><td>United Kingdom</td></tr><tr><td><a href="mailto:libraryanditenquiries@plymouth.ac.uk">Email Us</a> | +44 1752 588588</td></tr></table>' +
-    '<div id="flyout"><div id="button"><div class="text btn btn-primary">Ask Live Chat</div></div><h3>Have Questions?</h3><h4>We\'ve Got Answers</h4><iframe id="library-chat-widget" src="https://us.refchatter.net/chat/plymouth-training@chat.refchatter.net?skin=782"></iframe></div>'
-	});
-
-	// app.controller('prmExploreFooterAfterController', [function(){
-	// 	var cw = this;
-	// 	cw.btn = document.getElementById('chat-button');
-	// 	cw.btn.click(function() {
-	// 		cw.widget = document.getElementById('chat-widget');
-	// 		if (cw.widget.classList.value.includes('closed'))
-	// 		{
-	// 			cw.widget.classList.value = "chat-widget chat-widget-opened"
-	// 		} 
-	// 		else 
-	// 		{
-	// 			cw.widget.classList.value = "chat-widget chat-widget-closed"
-	// 		};
-	// 	}); 
-	// }]);
+  app.component('prmExploreFooterAfter', {
+	bindings: {parentCtrl: '<'},
+	template: '<table><tr><td><a href="https://www.plymouth.ac.uk/student-life/your-studies/library">Charles Seale-Hayne Library</a></td></tr><tr><td>University of Plymouth</td></tr><tr><td>Drake Circus</td></tr><tr><td>Plymouth</td></tr><tr><td>Devon PL4 8AA</td></tr><tr><td>United Kingdom</td></tr><tr><td><a href="mailto:libraryanditenquiries@plymouth.ac.uk">Email Us</a> | +44 1752 588588</td></tr></table>' +
+				'<div id="flyout-container"><div id="flyout"><div id="button"><div class="text btn btn-primary">Ask Live Chat</div></div><h3>Have Questions?</h3><h4>We\'ve Got Answers</h4><iframe id="library-chat-widget" src="https://us.refchatter.net/chat/plymouth-training@chat.refchatter.net?skin=782"></iframe></div></div>'
+});
 
 	app.component('prmServiceDetailsAfter', {
         bindings: { parentCtrl: '<' },
@@ -81,26 +65,6 @@
     x.src = (document.location.protocol === "https:" ? "https://" : "http://") + "refchatter.net/js/libraryh3lp.js?714";
     var y = document.getElementsByTagName("script")[0]; y.parentNode.insertBefore(x, y);
   })();
-
-// Flyup opener
-//   (function(){
-// 	var btn = document.getElementById('chat-button');
-// 	btn.click(function() {
-// 	var widget = document.getElementById('chat-widget');
-// 	if (widget.classList.value.includes('closed'))
-// 	{
-// 		widget.classList.value = "chat-widget chat-widget-opened"
-// 	} 
-// 	else 
-// 	{
-// 		widget.classList.value = "chat-widget chat-widget-closed"
-// 	};
-// 	}); 
-
-//   })();
-	
-
-
 
 
 // Google Analytics
