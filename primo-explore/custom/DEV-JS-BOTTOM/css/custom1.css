@@ -128,7 +128,7 @@ prm-top-nav-bar-links-after {
   font-size: 11.25px;
   font-weight: 600;
   font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-  letter-spacing: 0.3375px
+  letter-spacing: 0.3375px;
   line-height: 13.5px;
   margin: 3px;
   min-width: 100px;
@@ -143,6 +143,7 @@ prm-top-nav-bar-links-after div.libraryh3lp {
 prm-top-nav-bar-links-after div.libraryh3lp:hover {
   color: #4D6B82;
 }
+
 
 prm-top-nav-bar-links-after div.libraryh3lp a {
   color: #BFC8CF;
@@ -172,13 +173,96 @@ prm-alert-bar {
 
 
 /*Footer*/
-/*Push down and Center*/
-  /* Copied from http://alliance-primo-sb.hosted.exlibrisgroup.com 24/08/2018   */
-  prm-explore-footer-after {
-    padding-left: 100px;
-    }
-    prm-explore-footer-after table {
-        text-align: center;
-        width: 114.5%;
-    }
+/*Address in footer*/
+prm-explore-footer-after .library-address {
+  text-align: center;
+  min-width: 300px;
+}
+
+@media screen and (min-width:600px){
+  prm-explore-footer-after .library-address {
+    margin-right: 75%;
+    margin-left: 35%;
+  }
+}
+
+/*RefChatter Widgit*/
+.chat-widget {
+  border: 1px solid #bfb0a7;
+  bottom: 0;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+  height: 0;
+  max-height: 400px;
+  max-width: 97.5%;
+  position: fixed;
+  right: 1.5%;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+  z-index: 10;
+}
+@media print {
+  .chat-widget {
+  display: none;
+  }
+}
+@media (min-width: 31.25em) {
+  .chat-widget {
+  max-width: 500px;
+  }
+}
+.chat-widget-closed {
+  height: 36px;
+}
+.chat-widget-opened {
+  height: 100%;
+  max-height: 400px;
+}
+.chat-widget-button {
+  background: #fff none repeat scroll 0 0;
+  border: 0 none;
+  font-size: 100%;
+  height: 36px;
+  outline: 0 none;
+  padding: 0 1em;
+  text-align: left;
+  width: 100%;
+}
+.chat-widget-button:active, .chat-widget-button:hover {
+  background-color: #e6e0dc;
+  cursor: pointer;
+}
+.chat-button-label {
+  display: inline-block;
+  padding-top: 2px;
+}
+.chat-button-label::before {
+  background-color: #00a66e;
+  border-radius: 50%;
+  color: #594a41;
+  content: " ";
+  display: inline-block;
+  height: 1em;
+  margin-right: 0.5em;
+  position: relative;
+  top: 2px;
+  width: 1em;
+}
+.chat-widget-button button, button.chat-widget-button {
+  background: #8ee5ee none repeat scroll 0 0;
+  color: #594a41;
+  margin: 0;
+}
+.chat-widget iframe {
+  border: medium none;
+  height: 100%;
+  max-height: 362px;
+  width: 100%;
+}
+.chat-button-control {
+  color: #888;
+  float: right;
+  font-size: 140%;
+  font-style: normal;
+  font-weight: 400;
+}
     
