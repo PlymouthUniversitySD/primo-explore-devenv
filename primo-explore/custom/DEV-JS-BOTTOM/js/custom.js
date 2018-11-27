@@ -17,8 +17,18 @@
     
   /*Custom Footer */
   /* Copied from http://alliance-primo-sb.hosted.exlibrisgroup.com 24/08/2018   */
+	app.component('libraryAddressComponent', {
+		template: '<div class="library-address-container"><table class="library-address"><tr><td><a href="https://www.plymouth.ac.uk/student-life/your-studies/library">Charles Seale-Hayne Library</a></td></tr><tr><td>University of Plymouth</td></tr><tr><td>Drake Circus</td></tr><tr><td>Plymouth</td></tr><tr><td>Devon PL4 8AA</td></tr><tr><td>United Kingdom</td></tr><tr><td><a href="mailto:libraryanditenquiries@plymouth.ac.uk">Email Us</a> | +44 1752 588588</td></tr></table></div>'
+	});
+
+	app.component('libraryRefChatComponent', {
+		bindings: { parentCtrl: '<'},
+
+	});
+
 	app.component('prmExploreFooterAfter', {
-		template: '<table><tr><td><a href="https://www.plymouth.ac.uk/student-life/your-studies/library">Charles Seale-Hayne Library</a></td></tr><tr><td>University of Plymouth</td></tr><tr><td>Drake Circus</td></tr><tr><td>Plymouth</td></tr><tr><td>Devon PL4 8AA</td></tr><tr><td>United Kingdom</td></tr><tr><td><a href="mailto:libraryanditenquiries@plymouth.ac.uk">Email Us</a> | +44 1752 588588</td></tr></table>'
+		bindings: { parentCtrl: '<'},
+		template: '<library-address-component></library-address-component><library-ref-chat-component parent-ctrl="$ctrl.parent"></library-ref-chat-component>'
 	});
 
 	app.component('prmServiceDetailsAfter', {
@@ -64,11 +74,6 @@
     x.src = (document.location.protocol === "https:" ? "https://" : "http://") + "refchatter.net/js/libraryh3lp.js?714";
     var y = document.getElementsByTagName("script")[0]; y.parentNode.insertBefore(x, y);
   })();
-
-
-
-
-
 
 // Google Analytics
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
