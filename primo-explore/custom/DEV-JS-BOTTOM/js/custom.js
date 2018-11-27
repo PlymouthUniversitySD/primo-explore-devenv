@@ -22,9 +22,32 @@
 	});
 
 	app.component('libraryRefChatComponent', {
-		bindings: { parentCtrl: '<'},
-
+		bindings: { parentCtrl: '<', 
+					onClick: '&' },
+		template: '<div id="chat-widget" class="chat-widget chat-widget-closed">' +
+                '<button id="chat-button" data-ga-label="Chat widget" data-ga-action="Click" data-ga-category="Interface" class="chat-widget-button track tracking">' +
+                '<span class="chat-button-label">Have a Question?</span><span class="chat-button-control">+</span>' +
+                '</button>' +				
+                '<iframe id="library-chat-widget" src="https://us.refchatter.net/chat/plymouth-training@chat.refchatter.net?skin=782"></iframe>' +
+              '</div>'
 	});
+
+	app.controller('libraryRefChatComponentController', [function() {
+		var ctrl = this;
+
+		ctrl.click = function(){
+			var widget = document.getElementById('chat-widget');
+			if(widget.classList.contains('closed')){
+				widget.classList = "chat-wiget chat-widget-opened";
+			} else {
+				widget.classList = "chat-wiget chat-widget-closed";
+			}		
+		}
+		/*$('#chat-button').click(function() {
+      $(this).parent().toggleClass('chat-widget-opened chat-widget-closed');
+      }*/
+
+	}]);
 
 	app.component('prmExploreFooterAfter', {
 		bindings: { parentCtrl: '<'},
