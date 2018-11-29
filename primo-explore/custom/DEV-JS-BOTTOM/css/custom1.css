@@ -177,6 +177,7 @@ prm-alert-bar {
 prm-explore-footer-after .library-address {
   text-align: center;
   min-width: 300px;
+  padding-bottom: 5em;
 }
 
 @media screen and (min-width:600px){
@@ -188,11 +189,11 @@ prm-explore-footer-after .library-address {
 
 /*RefChatter Widgit*/
 .chat-widget {
-  border: 1px solid #bfb0a7;
+  border: none;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   bottom: 0;
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2); */
   height: 0;
   max-height: 400px;
   max-width: 97.5%;
@@ -220,19 +221,22 @@ prm-explore-footer-after .library-address {
   max-height: 400px;
 }
 .chat-widget-button {
-  background: #fff none repeat scroll 0 0;
+  position:relative;
+  background: #4D6B82 none repeat scroll 0 0;
   border: 0 none;
   font-size: 100%;
   height: 36px;
   outline: 0 none;
   padding: 0 1em;
   text-align: left;
-  width: 100%;
+  float: right;
+  width: 37%;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
 .chat-widget-button:active, .chat-widget-button:hover {
-  background-color: #e6e0dc;
+  background-color: rgb(189, 198, 204);
+  color: #4D6B82;
   cursor: pointer;
 }
 .chat-button-label {
@@ -241,8 +245,8 @@ prm-explore-footer-after .library-address {
 }
 .chat-button-label::before {
   background-color: #00a66e;
+  border: 2px solid green;
   border-radius: 50%;
-  color: #594a41;
   content: " ";
   display: inline-block;
   height: 1em;
@@ -252,8 +256,8 @@ prm-explore-footer-after .library-address {
   width: 1em;
 }
 .chat-widget-button button, button.chat-widget-button {
-  background: #8ee5ee none repeat scroll 0 0;
-  color: #594a41;
+  background: #4D6B82 none repeat scroll 0 0;
+  color: #fff;
   margin: 0;
 }
 .chat-widget iframe {

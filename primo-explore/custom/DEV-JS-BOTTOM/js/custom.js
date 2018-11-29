@@ -22,73 +22,53 @@
 
 	app.component('libraryRefChatComponent', {
 		bindings: { parentCtrl: '<' },
-		template: '<div id="chat-widget" class="chat-widget chat-widget-closed" ng-controller="libraryRefChatComponentController">' +
-							'  <button id="chat-button" ng-click="toggleOpenClose()" data-ga-label="Chat widget" data-ga-action="Click" data-ga-category="Interface" class="chat-widget-button track tracking">' +
+		template: '<div id="chat-widget" class="chat-widget chat-widget-closed">' +
+							'  <button id="chat-button" onclick="if(this.parentElement.classList.contains(\'chat-widget-closed\')){this.parentElement.classList=\'chat-widget chat-widget-opened\'}' +
+							'    else {this.parentElement.classList=\'chat-widget chat-widget-closed\'}" data-ga-label="Chat widget" data-ga-action="Click" data-ga-category="Interface" class="chat-widget-button track tracking">' +
 							'  <span class="chat-button-label">Have a Question?</span><span class="chat-button-control"></span>' +
 							'  </button>' +
 							'  <iframe id="library-chat-widget" src="https://us.refchatter.net/chat/plymouth-training@chat.refchatter.net?skin=782"></iframe>' +
-							'</div>',
-		controller: 'libraryRefChatComponentController'
+							'</div>'
 	});
 
-	app.controller('libraryRefChatComponentController', [function() {    
-		var ctrl = this;
-
-		ctrl.toggleOpenClose = function() {
-      var widget = document.getElementById('chat-widget');
-			if(widget.classList.contains('closed')){
-				widget.classList = "chat-wiget chat-widget-opened";
-			} else {
-				widget.classList = "chat-wiget chat-widget-closed";
-			}		
-		}
-		/*$('#chat-button').click(function() {
-      $(this).parent().toggleClass('chat-widget-opened chat-widget-closed');
-	}*/
-
-	}]);
-
 	app.component('prmExploreFooterAfter', {
-		bindings: { parentCtrl: '<'},
-		template: '<button onClick="alert(\'clicked\');">click</button>'
+		bindings: { parentCtrl: '<' },
+		template: '<library-Ref-Chat-Component></library-Ref-Chat-Component><library-Address-Component></library-Address-Component>'
 	});
 
 	app.component('prmServiceDetailsAfter', {
-        bindings: { parentCtrl: '<' },
-        controller: 'prmServiceDetailsAfterController',
-        template: '<div ng-show="{{$ctrl.hasMMSID}}" layout="row" layout-xs="column" class="layout-block-xs layout-xs-column layout-row"> <div flex-gt-sm="20" flex-gt-xs="25" flex class="flex-gt-xs-25 flex-gt-sm-20 flex"> <span class="bold-text">MMSID</span> </div><div flex class="flex"> {{$ctrl.getMMSID()}} </div> </div>'
+		bindings: { parentCtrl: '<' },
+		controller: 'prmServiceDetailsAfterController',
+		template: '<div ng-show="{{$ctrl.hasMMSID}}" layout="row" layout-xs="column" class="layout-block-xs layout-xs-column layout-row"> <div flex-gt-sm="20" flex-gt-xs="25" flex class="flex-gt-xs-25 flex-gt-sm-20 flex"> <span class="bold-text">MMSID</span> </div><div flex class="flex"> {{$ctrl.getMMSID()}} </div> </div>'
 	});
 
 	app.controller('prmServiceDetailsAfterController', [function(){
-	var vm = this;
+		var vm = this;
 
-	vm.getMMSID = getMMSID;
-	vm.hasMMSID = hasMMSID(getMMSID());
-	
-	function hasMMSID(MMSID) {
-		if(!MMSID)
-		{
-			return false;
-		}
-		else
-		{
-			return true;
-		}
-	}
-	
-	function getMMSID() {
-		try{
-			return vm.parentCtrl.item.pnx.search.addsrcrecordid[0];
-		}
-		catch(err) {
-			return 0;
-		}
-	}
+		vm.getMMSID = getMMSID;
+		vm.hasMMSID = hasMMSID(getMMSID());
 		
+		function hasMMSID(MMSID) {
+			if(!MMSID)
+			{
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+		
+		function getMMSID() {
+			try{
+				return vm.parentCtrl.item.pnx.search.addsrcrecordid[0];
+			}
+			catch(err) {
+				return 0;
+			}
+		}		
 	}]);
- 
 })(); 
-
 
 // Live Chat opener
   (function() {
