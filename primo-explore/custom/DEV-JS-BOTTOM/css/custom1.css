@@ -189,6 +189,8 @@ prm-explore-footer-after .library-address {
 /*RefChatter Widgit*/
 .chat-widget {
   border: 1px solid #bfb0a7;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   bottom: 0;
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
   height: 0;
@@ -226,6 +228,8 @@ prm-explore-footer-after .library-address {
   padding: 0 1em;
   text-align: left;
   width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 .chat-widget-button:active, .chat-widget-button:hover {
   background-color: #e6e0dc;
