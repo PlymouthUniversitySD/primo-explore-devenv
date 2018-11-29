@@ -16,27 +16,26 @@
   }]);  
     
   /*Custom Footer */
-  /* Copied from http://alliance-primo-sb.hosted.exlibrisgroup.com 24/08/2018   */
 	app.component('libraryAddressComponent', {
 		template: '<div class="library-address-container"><table class="library-address"><tr><td><a href="https://www.plymouth.ac.uk/student-life/your-studies/library">Charles Seale-Hayne Library</a></td></tr><tr><td>University of Plymouth</td></tr><tr><td>Drake Circus</td></tr><tr><td>Plymouth</td></tr><tr><td>Devon PL4 8AA</td></tr><tr><td>United Kingdom</td></tr><tr><td><a href="mailto:libraryanditenquiries@plymouth.ac.uk">Email Us</a> | +44 1752 588588</td></tr></table></div>'
 	});
 
 	app.component('libraryRefChatComponent', {
-		bindings: { parentCtrl: '<', 
-					onClick: '&' },
-		template: '<div id="chat-widget" class="chat-widget chat-widget-closed">' +
-                '<button id="chat-button" data-ga-label="Chat widget" data-ga-action="Click" data-ga-category="Interface" class="chat-widget-button track tracking">' +
-                '<span class="chat-button-label">Have a Question?</span><span class="chat-button-control">+</span>' +
-                '</button>' +				
-                '<iframe id="library-chat-widget" src="https://us.refchatter.net/chat/plymouth-training@chat.refchatter.net?skin=782"></iframe>' +
-              '</div>'
+		bindings: { parentCtrl: '<' },
+		template: '<div id="chat-widget" class="chat-widget chat-widget-closed" ng-controller="libraryRefChatComponentController">' +
+							'  <button id="chat-button" ng-click="toggleOpenClose()" data-ga-label="Chat widget" data-ga-action="Click" data-ga-category="Interface" class="chat-widget-button track tracking">' +
+							'  <span class="chat-button-label">Have a Question?</span><span class="chat-button-control"></span>' +
+							'  </button>' +
+							'  <iframe id="library-chat-widget" src="https://us.refchatter.net/chat/plymouth-training@chat.refchatter.net?skin=782"></iframe>' +
+							'</div>',
+		controller: 'libraryRefChatComponentController'
 	});
 
-	app.controller('libraryRefChatComponentController', [function() {
+	app.controller('libraryRefChatComponentController', [function() {    
 		var ctrl = this;
 
-		ctrl.click = function(){
-			var widget = document.getElementById('chat-widget');
+		ctrl.toggleOpenClose = function() {
+      var widget = document.getElementById('chat-widget');
 			if(widget.classList.contains('closed')){
 				widget.classList = "chat-wiget chat-widget-opened";
 			} else {
@@ -45,13 +44,13 @@
 		}
 		/*$('#chat-button').click(function() {
       $(this).parent().toggleClass('chat-widget-opened chat-widget-closed');
-      }*/
+	}*/
 
 	}]);
 
 	app.component('prmExploreFooterAfter', {
 		bindings: { parentCtrl: '<'},
-		template: '<library-address-component></library-address-component><library-ref-chat-component parent-ctrl="$ctrl.parent"></library-ref-chat-component>'
+		template: '<button onClick="alert(\'clicked\');">click</button>'
 	});
 
 	app.component('prmServiceDetailsAfter', {
