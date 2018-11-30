@@ -13,8 +13,8 @@
 
   app.controller('prmTopNavBarLinksAfterController', [function(){
     var mm = this;
-  }]);  
-    
+  }]);
+
   /*Custom Footer */
 	app.component('libraryAddressComponent', {
 		template: '<div class="library-address-container"><table class="library-address"><tr><td><a href="https://www.plymouth.ac.uk/student-life/your-studies/library">Charles Seale-Hayne Library</a></td></tr><tr><td>University of Plymouth</td></tr><tr><td>Drake Circus</td></tr><tr><td>Plymouth</td></tr><tr><td>Devon PL4 8AA</td></tr><tr><td>United Kingdom</td></tr><tr><td><a href="mailto:libraryanditenquiries@plymouth.ac.uk">Email Us</a> | +44 1752 588588</td></tr></table></div>'
@@ -47,7 +47,7 @@
 
 		vm.getMMSID = getMMSID;
 		vm.hasMMSID = hasMMSID(getMMSID());
-		
+
 		function hasMMSID(MMSID) {
 			if(!MMSID)
 			{
@@ -58,7 +58,7 @@
 				return true;
 			}
 		}
-		
+
 		function getMMSID() {
 			try{
 				return vm.parentCtrl.item.pnx.search.addsrcrecordid[0];
@@ -66,9 +66,9 @@
 			catch(err) {
 				return 0;
 			}
-		}		
+		}
 	}]);
-})(); 
+})();
 
 // Live Chat opener
   (function() {
@@ -163,4 +163,3 @@ ga('require', 'urlChangeTracker', {
 ga('send', 'pageview',{
   dimension1: 'page load'
 });
-
