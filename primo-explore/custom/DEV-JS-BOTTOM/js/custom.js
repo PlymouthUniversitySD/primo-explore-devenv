@@ -27,7 +27,7 @@
 							'    else {this.parentElement.classList=\'chat-widget chat-widget-closed\'}" data-ga-label="Chat widget" data-ga-action="Click" data-ga-category="Interface" class="chat-widget-button track tracking">' +
 							'  <span class="chat-button-label">Have a Question?</span><span class="chat-button-control"></span>' +
 							'  </button>' +
-							'  <iframe id="library-chat-widget" src="https://us.refchatter.net/chat/plymouth-training@chat.refchatter.net?skin=782"></iframe>' +
+							'  <iframe id="library-chat-widget" src="https://us.refchatter.net/chat/plymouth-training@chat.refchatter.net?skin=1606"></iframe>' +
 							'</div>'
 	});
 
