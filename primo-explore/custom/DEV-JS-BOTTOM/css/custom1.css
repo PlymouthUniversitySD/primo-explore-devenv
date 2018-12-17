@@ -25,20 +25,19 @@ flex-direction: column;
 
 /*Uncomment the follwoing lines to move facets to the left*/
 
-/*
+
 prm-search > md-content.md-primoExplore-theme .main {
     display: -webkit-flex; !* Safari *!
     -webkit-flex-flow: row-reverse wrap; !* Safari 6.1+ *!
     display: flex;
     flex-flow: row-reverse wrap;
-
 }
 
 .screen-gt-sm .sidebar {
-    webkit-flex: 0 0 15%;
+    -webkit-flex: 0 0 15%;
     flex: 0 0 15%;
 }
-*/
+
 
 prm-logo .product-logo {
     cursor: pointer;
@@ -190,14 +189,14 @@ prm-explore-footer-after .library-address {
 /*RefChatter Widgit*/
 .chat-widget {
   border: none;
-  bottom: 0;
-  height: 0;
+  padding:none;
+  margin:none;
+  bottom: 200px;
+  height: 400px;
   max-height: 400px;
-  max-width: 97.5%;
   position: fixed;
-  right: 0%;
+  right: -10px;
   transition: all 0.5s ease 0s;
-  width: 100%;
   z-index: 10;
 }
 @media print {
@@ -207,11 +206,11 @@ prm-explore-footer-after .library-address {
 }
 @media (min-width: 31.25em) {
   .chat-widget {
-  max-width: 500px;
+  max-width: 400px;
   }
 }
 .chat-widget-closed {
-  height: 36px;
+  height: 400px;
 }
 .chat-widget-opened {
   height: 100%;
@@ -221,16 +220,17 @@ prm-explore-footer-after .library-address {
   position:relative;
   background: #4D6B82 none repeat scroll 0 0;
   border: 0 none;
+  margin: none;
   font-size: 100%;
-  height: 50px;
+  height: 90px;
   outline: 0 none;
-  padding: 0 3em;
-  text-align: left;
-  float: right;
-  width: 50%;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  vertical-align: top;
+  right: -5px;
+  width: 15%;
+  display: inline;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 .chat-widget-button:active, .chat-widget-button:hover {
   background-color: rgb(189, 198, 204);
@@ -241,17 +241,25 @@ prm-explore-footer-after .library-address {
   cursor: pointer;
 }
 .chat-button-label {
+  /* -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg); */
   display: inline-block;
-  margin-bottom: 15px;
+  height:4em;
+  padding: 0%;
+  margin:0px;
+  text-align: center;
+  vertical-align: text-top;
 }
 .chat-button-label::before {
   position: relative;
   background-image: url('/primo-explore/custom/DEV-JS-BOTTOM/img/ask-PNG.png');
   background-repeat: no-repeat;
-  background-position-y: 1.5em;
-  content: " ";
+  background-position-y: 1em;
+  content: "";
   display: inline-block;
-  height: 3em;
+  height: 2em;
   margin-right: 0.5em;
   width: 2em;
 }
@@ -263,10 +271,12 @@ prm-explore-footer-after .library-address {
   margin-right:2px;
 }
 .chat-widget iframe {
-  border: medium none;
+  margin: none;
+  border: none;
   height: 100%;
-  max-height: 362px;
-  width: 100%;
+  max-height: 400px;
+  width: 75%;
+  right: 0px;
 }
 .chat-button-control {
   color: #888;
