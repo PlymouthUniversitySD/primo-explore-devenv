@@ -209,11 +209,11 @@ prm-explore-footer-after .library-address {
   }
 }
 .chat-widget-closed {
-  height: 400px;
+  transition: all 0.5s ease 0s;
+  right: -400px
 }
 .chat-widget-opened {
-  width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 .chat-widget-button {
   position:relative;
@@ -229,11 +229,11 @@ prm-explore-footer-after .library-address {
   right: -5px;
   width: 60px;
   display: inline-block;
-  /* border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px; */
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .chat-widget-button:active, .chat-widget-button:hover {
-  background-color: rgb(189, 198, 204);
+  background-color: #F3F3F3;
   color: #4D6B82;
   border: 2px solid #fff;
   border-bottom: none;
@@ -241,10 +241,10 @@ prm-explore-footer-after .library-address {
   cursor: pointer;
 }
 .chat-button-label {
-  /* -webkit-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg); */
+  -o-transform: rotate(90deg);
   display: inline-block;
   padding: 0;
   margin: 0;
