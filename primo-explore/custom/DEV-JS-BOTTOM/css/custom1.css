@@ -222,7 +222,7 @@ prm-explore-footer-after .library-address {
   margin: 0;
   padding: 0;
   font-size: 100%;
-  height: 120px;
+  height: 80px;
   /* outline: 0 none; */
   text-align: center;
   vertical-align: top;
@@ -232,6 +232,7 @@ prm-explore-footer-after .library-address {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+
 .chat-widget-button:active, .chat-widget-button:hover {
   background-color: #F3F3F3;
   color: #4D6B82;
@@ -240,11 +241,12 @@ prm-explore-footer-after .library-address {
   border-right: none;
   cursor: pointer;
 }
+
 .chat-button-label {
-  -webkit-transform: rotate(90deg);
+  /* -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
+  -o-transform: rotate(90deg); */
   display: inline-block;
   padding: 0;
   margin: 0;
@@ -252,17 +254,29 @@ prm-explore-footer-after .library-address {
   vertical-align: text-top;
 }
 
-/* .chat-button-label::before {
+.chat-button-label::before {
+  background-image: url('/primo-explore/custom/DEV-JS-BOTTOM/img/ask-PNG-light.png');
+  background-repeat: no-repeat;
+  content: " ";
+  display: inline-block;
+  height: 36px;
+  margin-right: 0.5em;
   position: relative;
+  top: 2px;
+  width: 36px;
+}
+
+.chat-button-label:hover::before {
   background-image: url('/primo-explore/custom/DEV-JS-BOTTOM/img/ask-PNG.png');
   background-repeat: no-repeat;
-  background-position-y: -2em;
-  content: "";
+  content: " ";
   display: inline-block;
-  height: 4em;
+  height: 36px;
   margin-right: 0.5em;
-  width: 2em;
-} */
+  position: relative;
+  top: 2px;
+  width: 36px;
+}
 
 .chat-widget-button button, button.chat-widget-button {
   background: #4D6B82 none repeat scroll 0 0;
@@ -270,6 +284,7 @@ prm-explore-footer-after .library-address {
   margin: 0;
   margin-right:2px;
 }
+
 .chat-widget iframe {
   position: relative;
   margin: 0px;
