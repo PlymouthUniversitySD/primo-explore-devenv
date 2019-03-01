@@ -25,7 +25,7 @@
 		template: '<div id="chat-widget" class="chat-widget chat-widget-closed">' +
 							'  <button id="chat-button" onclick="if(this.parentElement.classList.contains(\'chat-widget-closed\')){this.parentElement.classList=\'chat-widget chat-widget-opened\'}' +
 							'    else {this.parentElement.classList=\'chat-widget chat-widget-closed\'}" data-ga-label="Chat widget" data-ga-action="Click" data-ga-category="Interface" class="chat-widget-button track tracking">' +
-							'  <span class="chat-button-label">ASK</span><span class="chat-button-control"></span>' +
+							'  <span class="chat-button-label"></span><span class="chat-button-control"></span>' +
 							'  </button>' +
 							'  <iframe id="library-chat-widget" src="https://us.refchatter.net/chat/plymouth-training@chat.refchatter.net?skin=1606"></iframe>' +
 							'</div>'

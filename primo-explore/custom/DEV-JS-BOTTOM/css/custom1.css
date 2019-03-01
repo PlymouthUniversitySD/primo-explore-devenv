@@ -202,7 +202,7 @@ prm-explore-footer-after .library-address {
     position: fixed;
     right: 0px;
     transition: all 0.5s ease 0s;
-    z-index: 10;
+    z-index: 999;
   }
 
   .chat-widget {
@@ -257,7 +257,15 @@ prm-explore-footer-after .library-address {
     content: " ";
     display: inline-block;
     height: 36px;
+    position: relative;
+    top: 2px;
+    width: 36px;
+  }
 
+  .chat-button-label::after {
+    content: "ASK";
+    display: inline-block;
+    height: 25px;
     position: relative;
     top: 2px;
     width: 36px;
@@ -269,7 +277,6 @@ prm-explore-footer-after .library-address {
     content: " ";
     display: inline-block;
     height: 36px;
-
     position: relative;
     top: 2px;
     width: 36px;
@@ -304,7 +311,7 @@ prm-explore-footer-after .library-address {
     position: fixed;
     right: 0px;
     transition: all 0.5s ease 0s;
-    z-index: 10;
+    z-index: 999;
   }
 
   .chat-widget {
@@ -359,6 +366,15 @@ prm-explore-footer-after .library-address {
     content: " ";
     display: inline-block;
     height: 36px;
+    position: relative;
+    top: 2px;
+    width: 36px;
+  }
+
+  .chat-button-label::after {
+    content: "ASK";
+    display: inline-block;
+    height: 25px;
     position: relative;
     top: 2px;
     width: 36px;
@@ -406,7 +422,7 @@ prm-explore-footer-after .library-address {
   right: 0%;
   transition: all 0.5s ease 0s;
   width: 100%;
-  z-index: 15;
+  z-index: 999;
   }
 
   .chat-widget {
@@ -432,10 +448,11 @@ prm-explore-footer-after .library-address {
     padding: 0 1em;
     text-align: right;
     float: right;
-    width: 25%;
-    border-top-left-radius: 90%;
-    border-top-right-radius: 0%;
+    width: 15%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+    content: " ";
   }
 
   .chat-widget-button:active, .chat-widget-button:hover {
